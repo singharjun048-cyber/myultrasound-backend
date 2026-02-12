@@ -1,12 +1,16 @@
-const express = require("express");
-const router = express.Router();
-const Listing = require("../models/Listing");
-
-router.get("/", async (req, res) => {
-  const listings = await Listing.find();
-  res.json(listings);
-});
-
-module.exports = router;
+{
+  "name": "myultrasound-backend",
+  "version": "1.0.0",
+  "description": "Backend for MyUltrasound Marketplace",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.6.0"
+  }
+}
   
 
