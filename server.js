@@ -6,6 +6,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+const listingsRoutes = require("./routes/listings");
+app.use("/api/listings", listingsRoutes);
 
 // Import Routes
 const listingsRoute = require("./routes/listings");
