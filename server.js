@@ -7,16 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(err));
 
-// Routes
-const listingsRoutes = require("./routes/listings");
-app.use("/api/listings", listingsRoutes);
-
-// Test route
 app.get("/", (req, res) => {
   res.send("MyUltrasound Backend Running");
 });
